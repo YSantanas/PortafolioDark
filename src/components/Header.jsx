@@ -15,7 +15,7 @@ export const Header = () => {
         </Link>
         </Center>
         <Heading as="h2" color="gray.100" size="2xl">
-          Portafolío
+          Portafolio
         </Heading>
         <br />
        <Stack direction={['column', 'row']} spacing={3} align="center">
