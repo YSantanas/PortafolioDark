@@ -18,7 +18,7 @@ export const Header = () => {
           Portafolío
         </Heading>
         <br />
-        <Stack direction="row" spacing={3} align="center">
+       <Stack direction={['column', 'row']} spacing={3} align="center">
           <Button
             colorScheme="teal"
             variant="solid"
