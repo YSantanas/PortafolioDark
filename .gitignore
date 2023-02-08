@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/dist-ssr
+/build
+
+# misc
+!.vscode/extensions.json
+.DS_Store
+.env*
+.eslintcache
+.idea
+.vscode/
+*.local
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
+*.local.yml
+
+# Logs
+*.log
+lerna-debug.log*
+logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
