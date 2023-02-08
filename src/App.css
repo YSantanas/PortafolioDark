@@ -1,5 +1,10 @@
+* {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,7 +19,6 @@
 }
 
 .App-header {
-
   background-image: url("./assets/fondo1.jpg");
   height: 100vh;
   background-size: cover;
@@ -23,15 +27,12 @@
   background-color: transparent;
   opacity: 0.8;
 
-  
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(255, 255, 255);
-  
 }
 
 .App-link {
@@ -47,35 +48,28 @@
   }
 }
 
-
 .Pag-header {
-
   background-image: url("./assets/fondo02.jpg");
-  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
   opacity: 0.8;
 
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  
+  /* justify-content: center; */
+
   font-size: calc(5px + 2vmin);
   color: rgb(0, 0, 0);
 
-  overflow: auto;
-
-  grid-template-columns: auto auto;
-  padding-top: 100px;
+  /* padding-top: 50px;
   padding-bottom: 100px;
-
   padding-left: 10%;
-
-  padding-right: 10%;
+  padding-right: 10%; */
+  padding: 2rem;
+  min-height: 100vh;
 }
 
 .card-github {
@@ -84,8 +78,6 @@
   background-color: #4590ec;
   padding: 2.5px 15px;
   border-bottom: solid 2px #c8ceae;
-
-
 }
 
 .footer {
@@ -97,9 +89,26 @@
 }
 
 .imagenF {
-
- 
   opacity: 0.7;
   height: 40px;
   width: 50px;
 }
+
+.link-styles {
+  color: #23A1AC;
+}
+
+.link-styles:hover, .link-styles-active {
+  color: #23A1AC !important;
+  text-shadow:
+    0 0 7px #46e1ef,
+    0 0 10px #46e1ef,
+    0 0 21px #46e1ef,
+    0 0 42px #23A1AC,
+    0 0 82px #23A1AC,
+    0 0 92px #23A1AC,
+    0 0 102px #23A1AC,
+    0 0 151px #23A1AC;
+ transition:all ease 0.3;
+}
+

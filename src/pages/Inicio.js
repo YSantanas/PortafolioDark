@@ -1,85 +1,62 @@
-import "bootstrap-icons/font/bootstrap-icons.css";
+import React from "react";
+import logo from "../LogoYvette.png";
 
-import { Center } from "@chakra-ui/react";
+import { Button, Stack, Heading, Center } from "@chakra-ui/react";
 
-import Foto1 from "../assets/foto1.jpg";
-
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Image,
-  Text,
-  Stack,
-  Heading,
-  Link,
-} from "@chakra-ui/react";
-
-import '@fontsource/raleway/400.css'
-import '@fontsource/open-sans/700.css'
+import { Link } from "react-router-dom";
 
 export const Inicio = () => {
   return (
-    
-    <div className="Pag-header">
-      <Heading as="h2" color="gray.100" size="2xl" py="5" fontFamily='Heading Font Name'>
-        Acerca de mi
-      </Heading>
+    <div className="App-header">
+      <header>
+        <Center>
+          <img src={logo} className="App-logo" alt="logo" />
+        </Center>
+        <Heading as="h2" color="gray.100" size="2xl">
+          Portafolio
+        </Heading>
+        <br />
+        <Stack direction={["column", "row"]} spacing={3} align="center">
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            size="lg"
+            height="48px"
+            width="120px"
+            border="2px"
+            borderColor="gray.300"
+          >
+            <Link to="/acerca" className="text-white text-decoration-none">
+              Acerca de
+            </Link>
+          </Button>
 
-      <Card
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline"
-        boxShadow="outline"
-      >
-        <Image
-          objectFit="cover"
-          maxW={{ base: "100%", sm: "300px" }}
-          src={Foto1}
-          alt="Caffe Latte"
-          boxSize="auto"
-          p="1"
-          rounded="md"
-          boxShadow="2xl"
-        />
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            size="lg"
+            height="48px"
+            width="120px"
+            border="2px"
+            borderColor="gray.300"
+          >
+            <Link to="/proyectos" className="text-white text-decoration-none">Proyectos</Link>
+          </Button>
 
-        <Stack>
-          <CardBody>
-            <Heading size="lg">Inicio</Heading>
-
-            <Text py="5" color="teal.600">
-              Mi nombre es Yvette, me dedico ponderantemente al desarrollo web.
-            </Text>
-          </CardBody>
-          <Center>
-            <CardFooter >
-              <Link color="purple.600" href="https://github.com/YSantanas" isExternal>
-                <i class="bi bi-github"></i>
-              </Link>
-
-              <Link
-              color="linkedin.600"
-                ml="5"
-                href="https://www.linkedin.com/in/m-yvette-santana-s%C3%A1nchez-615968229/"
-                isExternal
-              >
-                <i class="bi bi-linkedin"></i>
-              </Link>
-              <Link
-              color="facebook.600"
-                ml="5"
-                href="https://facebook.com/yvet.santana.75"
-                isExternal
-              >
-                <i class="bi bi-facebook"></i>
-              </Link>
-            </CardFooter>
-          </Center>
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            size="lg"
+            height="48px"
+            width="120px"
+            border="2px"
+            borderColor="gray.300"
+          >
+            <Link to="/contactame" className="text-white text-decoration-none">Contactame</Link>
+          </Button>
         </Stack>
-      </Card>
-     
+      </header>
     </div>
-    
   );
 };
 export default Inicio;

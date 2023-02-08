@@ -10,15 +10,26 @@ export const Header = () => {
     <div className="App-header">
       <header>
         <Center>
-        <Link style={{ color: "white" }} to="/">
           <img src={logo} className="App-logo" alt="logo" />
-        </Link>
         </Center>
         <Heading as="h2" color="gray.100" size="2xl">
           Portafolio
         </Heading>
         <br />
-       <Stack direction={['column', 'row']} spacing={3} align="center">
+        <Stack direction={["column", "row"]} spacing={3} align="center">
+          {/* <Button
+            colorScheme="teal"
+            variant="solid"
+            size="lg"
+            height="48px"
+            width="120px"
+            border="2px"
+            borderColor="gray.300"
+          >
+            <Link to="/">Inicio</Link>
+         
+          </Button> */}
+
           <Button
             colorScheme="teal"
             variant="solid"
@@ -28,9 +39,7 @@ export const Header = () => {
             border="2px"
             borderColor="gray.300"
           >
-            <Link style={{ color: "white" }} to="/">
-              Inicio
-            </Link>
+            <Link to="/acerca#acerca">Acerca de</Link>
           </Button>
 
           <Button
@@ -42,9 +51,7 @@ export const Header = () => {
             border="2px"
             borderColor="gray.300"
           >
-            <Link style={{ color: "white" }} to="/Acerca">
-              Acerca de
-            </Link>
+            <Link to="/proyectos#proyectos">Proyectos</Link>
           </Button>
 
           <Button
@@ -56,23 +63,7 @@ export const Header = () => {
             border="2px"
             borderColor="gray.300"
           >
-            <Link style={{ color: "white" }} to="/Proyectos">
-              Proyectos
-            </Link>
-          </Button>
-
-          <Button
-            colorScheme="teal"
-            variant="solid"
-            size="lg"
-            height="48px"
-            width="120px"
-            border="2px"
-            borderColor="gray.300"
-          >
-            <Link style={{ color: "white" }} to="/Contactame">
-              Contáctame
-            </Link>
+            <Link to="/contactame#contactame">Contactame</Link>
           </Button>
         </Stack>
       </header>

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 import { Heading } from "@chakra-ui/react";
 
@@ -16,7 +17,8 @@ import git7 from "../assets/git7.png";
 
 import { Button, Link, Center } from "@chakra-ui/react";
 
-const fotos = [git1, git2, git3, git4, git5, git6,git7];
+import { Navbar } from "../components/Navbar";
+const fotos = [git1, git2, git3, git4, git5, git6, git7];
 const nombres = [
   "TreeAcademy",
   "Proyecto IA",
@@ -36,7 +38,6 @@ const descripcion = [
   "plicación móvil ",
 ];
 
-
 const direccion = [
   "https://github.com/YSantanas/treeAcademyFULL",
   "https://github.com/YSantanas/IAProyecto",
@@ -48,38 +49,49 @@ const direccion = [
 
 const Proyectos = () => {
   return (
-    <div className="Pag-header">
-      <Heading as="h2" color="gray.100" size="2xl" py="5" fontFamily='Heading Font Name'>
-        Proyectos
-      </Heading>
+    <div className="Pag-header" id="proyectos">
+      <div className="container">
+        <Navbar />
 
-      <Row xs={1} md={2} className="g-4">
-        {Array.from({ length: 6 }).map((_, idx) => (
-          <Col>
-            <Card className="card-github">
-              <Card.Img variant="top" src={fotos[idx]} class="img-thumbnail" />
-              <Card.Body>
-                <Card.Title>{nombres[idx]}</Card.Title>
-                <Card.Text>{descripcion[idx]}</Card.Text>
-              </Card.Body>
-              <Center>
-                <Button
-                  height="60px"
-                  width="100%"
-                  colorScheme="teal"
-                  variant="ghost"
-                >
-                   
-                  <Link href={direccion[idx]} isExternal>
-                  <i class="bi bi-github"> Acceder</i> 
-                  </Link>
-                  
-                </Button>
-              </Center>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+        <Heading
+          as="h2"
+          color="gray.100"
+          size="2xl"
+          py="5"
+          fontFamily="Heading Font Name"
+        >
+          Proyectos
+        </Heading>
+        <Row xs={1} md={2} className="g-4">
+          {Array.from({ length: 6 }).map((_, idx) => (
+            <Col>
+              <Card className="card-github">
+                <Card.Img
+                  variant="top"
+                  src={fotos[idx]}
+                  class="img-thumbnail"
+                />
+                <Card.Body>
+                  <Card.Title>{nombres[idx]}</Card.Title>
+                  <Card.Text>{descripcion[idx]}</Card.Text>
+                </Card.Body>
+                <Center>
+                  <Button
+                    height="60px"
+                    width="100%"
+                    colorScheme="teal"
+                    variant="ghost"
+                  >
+                    <Link href={direccion[idx]} isExternal>
+                      <i class="bi bi-github"> Acceder</i>
+                    </Link>
+                  </Button>
+                </Center>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
     </div>
   );
 };
