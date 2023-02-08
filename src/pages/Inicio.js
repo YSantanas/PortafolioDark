@@ -16,8 +16,10 @@ export const Inicio = () => {
           Portafolio
         </Heading>
         <br />
-        <Stack direction={["column", "row"]} spacing={3} align="center">
+        {/* <Stack direction={["column", "row"]} spacing={3} align="center"> */}
+        <div className="row gap-4 justify-content-center">
           <Button
+            className="col-lg-3 col-6"
             colorScheme="teal"
             variant="solid"
             size="lg"
@@ -32,6 +34,7 @@ export const Inicio = () => {
           </Button>
 
           <Button
+            className="col-lg-3 col-6"
             colorScheme="teal"
             variant="solid"
             size="lg"
@@ -40,10 +43,13 @@ export const Inicio = () => {
             border="2px"
             borderColor="gray.300"
           >
-            <Link to="/proyectos" className="text-white text-decoration-none">Proyectos</Link>
+            <Link to="/proyectos" className="text-white text-decoration-none">
+              Proyectos
+            </Link>
           </Button>
 
           <Button
+            className="col-lg-3 col-6"
             colorScheme="teal"
             variant="solid"
             size="lg"
@@ -52,9 +58,12 @@ export const Inicio = () => {
             border="2px"
             borderColor="gray.300"
           >
-            <Link to="/contactame" className="text-white text-decoration-none">Contactame</Link>
+            <Link to="/contactame" className="text-white text-decoration-none">
+              Contactame
+            </Link>
           </Button>
-        </Stack>
+          {/* </Stack> */}
+        </div>
       </header>
     </div>
   );
